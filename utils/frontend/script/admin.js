@@ -1,5 +1,5 @@
-// const url = "http://localhost:3000";
-const url = "https://backend-funky.onrender.com"
+const url = "http://localhost:3000";
+// const url = "https://backend-funky.onrender.com"
 const product=()=>{
     const payload={
         name:document.getElementById("name").value,
