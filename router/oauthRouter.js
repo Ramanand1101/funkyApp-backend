@@ -6,7 +6,7 @@ const oauthRouter = express.Router();
 oauthRouter.use(express.static(path.join(__dirname, '../../Frontend')))
 
 oauthRouter.get("/oauthlogin",(req,res)=>{
-    res.sendFile(path.join(__dirname,"../../Frontend/index.html"))
+    res.sendFile(path.join("https://celadon-basbousa-d43b06.netlify.app/index.html#"))
 })
 // OAuth login route
 oauthRouter.get('/auth/google',
