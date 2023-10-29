@@ -6,7 +6,7 @@ const oauthRouter = express.Router();
 oauthRouter.use(express.static(path.join(__dirname, '../../Frontend')))
 
 oauthRouter.get("/oauthlogin",(req,res)=>{
-    res.sendFile(path.join("https://celadon-basbousa-d43b06.netlify.app/index.html#"))
+    res.sendFile(path.join(__dirname,"../../Frontend/index.html"))
 })
 // OAuth login route
 oauthRouter.get('/auth/google',
@@ -28,7 +28,7 @@ oauthRouter.get('/auth/google/callback',
     res.cookie('jwt', accessToken);  // Example: Store the token in a cookie
 
     // Redirect to frontend URL with the token (you can handle this token on the frontend)
-    res.redirect(`http://localhost:3000/oauth/oauthlogin?token=${accessToken}&uname=${user.email}`);
+    res.redirect(`https://celadon-basbousa-d43b06.netlify.app/oauth/oauthlogin?token=${accessToken}&uname=${user.email}`);
   }
 )
 
