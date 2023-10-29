@@ -3,10 +3,10 @@ const path=require("path")
 const jwt=require('jsonwebtoken')
 const passport = require('passport');
 const oauthRouter = express.Router();
-// oauthRouter.use(express.static(path.join(__dirname, '../../Frontend')))
+oauthRouter.use(express.static(path.join(__dirname, '../../Frontend')))
 
 oauthRouter.get("/oauthlogin",(req,res)=>{
-    res.sendFile("../utils/frontend/index.html")
+    res.sendFile(  require("../utils/frontend/index.html"))
 })
 // OAuth login route
 oauthRouter.get('/auth/google',
